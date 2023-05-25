@@ -9,6 +9,21 @@ class TaskListView(generic.ListView):
     model = Task
 
 
+class TaskCreateView(generic.CreateView):
+    model = Task
+    success_url = reverse_lazy("todo:task-create")
+
+
+class TaskUpdateView(generic.UpdateView):
+    model = Task
+    success_url = reverse_lazy("todo:task-update")
+
+
+class TaskDeleteView(generic.DeleteView):
+    model = Task
+    success_url = reverse_lazy("todo:task-delete")
+
+
 class TagListView(generic.ListView):
     model = Tag
     template_name = "todo/tag_list.html"
