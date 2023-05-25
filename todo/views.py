@@ -11,7 +11,7 @@ class TaskListView(generic.ListView):
 
 class TagListView(generic.ListView):
     model = Tag
-    template_name = "todo/tag-list.html"
+    template_name = "todo/tag_list.html"
 
 
 class TagCreateView(generic.CreateView):
